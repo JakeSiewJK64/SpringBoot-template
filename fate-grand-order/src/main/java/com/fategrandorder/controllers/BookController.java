@@ -1,4 +1,4 @@
-package Controllers;
+package com.fategrandorder.controllers;
 
 import java.util.List;
 import java.util.ArrayList;
