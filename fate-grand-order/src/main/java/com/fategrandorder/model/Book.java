@@ -4,60 +4,69 @@ import java.io.Serializable;
 
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
+import org.springframework.data.mongodb.core.mapping.Field;
 
 @Document(collection = "Books")
 public class Book implements Serializable {
 
     @Id
-    public String Id;
-    public String Name;
-    public Double Price;
-    public String Category;
-    public String Author;
+    public String id;
+
+    @Field("Name")
+    public String name;
+
+    @Field("Price")
+    public Double price;
+
+    @Field("Category")
+    public String category;
+    
+    @Field("Author")
+    public String author;
 
     public String getId() {
-        return this.Id;
+        return this.id;
     }
 
-    public void setId(String Id) {
-        this.Id = Id;
+    public void setId(String id) {
+        this.id = id;
     }
 
     public String getName() {
-        return this.Name;
+        return this.name;
     }
 
-    public void setName(String Name) {
-        this.Name = Name;
+    public void setName(String name) {
+        this.name = name;
     }
 
     public Double getPrice() {
-        return this.Price;
+        return this.price;
     }
 
-    public void setPrice(Double Price) {
-        this.Price = Price;
+    public void setPrice(Double price) {
+        this.price = price;
     }
 
     public String getCategory() {
-        return this.Category;
+        return this.category;
     }
 
-    public void setCategory(String Category) {
-        this.Category = Category;
+    public void setCategory(String category) {
+        this.category = category;
     }
 
     public String getAuthor() {
-        return this.Author;
+        return this.author;
     }
 
-    public void setAuthor(String Author) {
-        this.Author = Author;
+    public void setAuthor(String author) {
+        this.author = author;
     }
 
     @Override
     public String toString() {
-        return "{" + " Id='" + getId() + "'" + ", Name='" + getName() + "'" + ", Price='" + getPrice() + "'"
-                + ", Category='" + getCategory() + "'" + ", Author='" + getAuthor() + "'" + "}";
+        return "{" + " id='" + getId() + "'" + ", name='" + getName() + "'" + ", price='" + getPrice() + "'"
+                + ", category='" + getCategory() + "'" + ", author='" + getAuthor() + "'" + "}";
     }
 }
