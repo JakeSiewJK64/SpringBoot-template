@@ -1,0 +1,14 @@
+// Import library functions for theme creation.
+@use '~@angular/material' as mat;
+@import "~@angular/material/theming";
+
+// Include non-theme styles for core.
+@include mat.core();
+
+// Define your application's custom theme.
+$primary: mat.define-palette(mat.$orange-palette, A100, A700);
+$accent: mat.define-palette(mat.$purple-palette, A200, A100, A400);
+$theme: mat.define-light-theme($primary, $accent);
+
+// Include theme styles for Angular Material components.
+@include mat.all-component-themes($theme);
