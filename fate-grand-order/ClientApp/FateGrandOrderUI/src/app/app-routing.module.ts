@@ -1,5 +1,6 @@
 import { Component, NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
+import { FetchBooksComponent } from './fetch-books/fetch-books.component';
 import { HomeComponent } from './home/home.component';
 
 const permission = {
@@ -10,6 +11,10 @@ const routes: Routes = [
   {
     path: 'home',
     component: HomeComponent
+  },
+  {
+    path: 'fetch-books',
+    component: FetchBooksComponent
   },
   {
     path: '**',
