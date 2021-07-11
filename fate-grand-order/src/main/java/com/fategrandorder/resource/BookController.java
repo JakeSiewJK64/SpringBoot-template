@@ -17,7 +17,7 @@ import io.swagger.v3.oas.annotations.parameters.RequestBody;
 
 @RestController
 @RequestMapping("/rest/books")
-public class BookResource {
+public class BookController {
 
     @Autowired
     private BookDAO bookDao = new BookDAO();
