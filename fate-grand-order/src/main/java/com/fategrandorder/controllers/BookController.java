@@ -1,4 +1,4 @@
-package com.fategrandorder.resource;
+package com.fategrandorder.controllers;
 
 import java.util.List;
 
